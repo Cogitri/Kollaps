@@ -1,0 +1,573 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3AEDF09429E1535300A9A5A5 /* KollapsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDF09329E1535300A9A5A5 /* KollapsApp.swift */; };
+		3AEDF09629E1535300A9A5A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDF09529E1535300A9A5A5 /* ContentView.swift */; };
+		3AEDF09829E1535400A9A5A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AEDF09729E1535400A9A5A5 /* Assets.xcassets */; };
+		3AEDF09B29E1535400A9A5A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AEDF09A29E1535400A9A5A5 /* Preview Assets.xcassets */; };
+		3AEDF0A629E1535400A9A5A5 /* KollapsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDF0A529E1535400A9A5A5 /* KollapsTests.swift */; };
+		3AEDF0B029E1535400A9A5A5 /* KollapsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDF0AF29E1535400A9A5A5 /* KollapsUITests.swift */; };
+		3AEDF0B229E1535400A9A5A5 /* KollapsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDF0B129E1535400A9A5A5 /* KollapsUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3AEDF0A229E1535400A9A5A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AEDF08829E1535300A9A5A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AEDF08F29E1535300A9A5A5;
+			remoteInfo = Kollaps;
+		};
+		3AEDF0AC29E1535400A9A5A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AEDF08829E1535300A9A5A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AEDF08F29E1535300A9A5A5;
+			remoteInfo = Kollaps;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3AEDF09029E1535300A9A5A5 /* Kollaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kollaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AEDF09329E1535300A9A5A5 /* KollapsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KollapsApp.swift; sourceTree = "<group>"; };
+		3AEDF09529E1535300A9A5A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3AEDF09729E1535400A9A5A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3AEDF09A29E1535400A9A5A5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3AEDF09C29E1535400A9A5A5 /* Kollaps.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kollaps.entitlements; sourceTree = "<group>"; };
+		3AEDF0A129E1535400A9A5A5 /* KollapsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KollapsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AEDF0A529E1535400A9A5A5 /* KollapsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KollapsTests.swift; sourceTree = "<group>"; };
+		3AEDF0AB29E1535400A9A5A5 /* KollapsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KollapsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AEDF0AF29E1535400A9A5A5 /* KollapsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KollapsUITests.swift; sourceTree = "<group>"; };
+		3AEDF0B129E1535400A9A5A5 /* KollapsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KollapsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3AEDF08D29E1535300A9A5A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AEDF09E29E1535400A9A5A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AEDF0A829E1535400A9A5A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3AEDF08729E1535300A9A5A5 = {
+			isa = PBXGroup;
+			children = (
+				3AEDF09229E1535300A9A5A5 /* Kollaps */,
+				3AEDF0A429E1535400A9A5A5 /* KollapsTests */,
+				3AEDF0AE29E1535400A9A5A5 /* KollapsUITests */,
+				3AEDF09129E1535300A9A5A5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3AEDF09129E1535300A9A5A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3AEDF09029E1535300A9A5A5 /* Kollaps.app */,
+				3AEDF0A129E1535400A9A5A5 /* KollapsTests.xctest */,
+				3AEDF0AB29E1535400A9A5A5 /* KollapsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3AEDF09229E1535300A9A5A5 /* Kollaps */ = {
+			isa = PBXGroup;
+			children = (
+				3AEDF09329E1535300A9A5A5 /* KollapsApp.swift */,
+				3AEDF09529E1535300A9A5A5 /* ContentView.swift */,
+				3AEDF09729E1535400A9A5A5 /* Assets.xcassets */,
+				3AEDF09C29E1535400A9A5A5 /* Kollaps.entitlements */,
+				3AEDF09929E1535400A9A5A5 /* Preview Content */,
+			);
+			path = Kollaps;
+			sourceTree = "<group>";
+		};
+		3AEDF09929E1535400A9A5A5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3AEDF09A29E1535400A9A5A5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3AEDF0A429E1535400A9A5A5 /* KollapsTests */ = {
+			isa = PBXGroup;
+			children = (
+				3AEDF0A529E1535400A9A5A5 /* KollapsTests.swift */,
+			);
+			path = KollapsTests;
+			sourceTree = "<group>";
+		};
+		3AEDF0AE29E1535400A9A5A5 /* KollapsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3AEDF0AF29E1535400A9A5A5 /* KollapsUITests.swift */,
+				3AEDF0B129E1535400A9A5A5 /* KollapsUITestsLaunchTests.swift */,
+			);
+			path = KollapsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3AEDF08F29E1535300A9A5A5 /* Kollaps */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AEDF0B529E1535400A9A5A5 /* Build configuration list for PBXNativeTarget "Kollaps" */;
+			buildPhases = (
+				3AEDF08C29E1535300A9A5A5 /* Sources */,
+				3AEDF08D29E1535300A9A5A5 /* Frameworks */,
+				3AEDF08E29E1535300A9A5A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kollaps;
+			productName = Kollaps;
+			productReference = 3AEDF09029E1535300A9A5A5 /* Kollaps.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3AEDF0A029E1535400A9A5A5 /* KollapsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AEDF0B829E1535400A9A5A5 /* Build configuration list for PBXNativeTarget "KollapsTests" */;
+			buildPhases = (
+				3AEDF09D29E1535400A9A5A5 /* Sources */,
+				3AEDF09E29E1535400A9A5A5 /* Frameworks */,
+				3AEDF09F29E1535400A9A5A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3AEDF0A329E1535400A9A5A5 /* PBXTargetDependency */,
+			);
+			name = KollapsTests;
+			productName = KollapsTests;
+			productReference = 3AEDF0A129E1535400A9A5A5 /* KollapsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3AEDF0AA29E1535400A9A5A5 /* KollapsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AEDF0BB29E1535400A9A5A5 /* Build configuration list for PBXNativeTarget "KollapsUITests" */;
+			buildPhases = (
+				3AEDF0A729E1535400A9A5A5 /* Sources */,
+				3AEDF0A829E1535400A9A5A5 /* Frameworks */,
+				3AEDF0A929E1535400A9A5A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3AEDF0AD29E1535400A9A5A5 /* PBXTargetDependency */,
+			);
+			name = KollapsUITests;
+			productName = KollapsUITests;
+			productReference = 3AEDF0AB29E1535400A9A5A5 /* KollapsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3AEDF08829E1535300A9A5A5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					3AEDF08F29E1535300A9A5A5 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					3AEDF0A029E1535400A9A5A5 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 3AEDF08F29E1535300A9A5A5;
+					};
+					3AEDF0AA29E1535400A9A5A5 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 3AEDF08F29E1535300A9A5A5;
+					};
+				};
+			};
+			buildConfigurationList = 3AEDF08B29E1535300A9A5A5 /* Build configuration list for PBXProject "Kollaps" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3AEDF08729E1535300A9A5A5;
+			productRefGroup = 3AEDF09129E1535300A9A5A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3AEDF08F29E1535300A9A5A5 /* Kollaps */,
+				3AEDF0A029E1535400A9A5A5 /* KollapsTests */,
+				3AEDF0AA29E1535400A9A5A5 /* KollapsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3AEDF08E29E1535300A9A5A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AEDF09B29E1535400A9A5A5 /* Preview Assets.xcassets in Resources */,
+				3AEDF09829E1535400A9A5A5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AEDF09F29E1535400A9A5A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AEDF0A929E1535400A9A5A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3AEDF08C29E1535300A9A5A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AEDF09629E1535300A9A5A5 /* ContentView.swift in Sources */,
+				3AEDF09429E1535300A9A5A5 /* KollapsApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AEDF09D29E1535400A9A5A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AEDF0A629E1535400A9A5A5 /* KollapsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AEDF0A729E1535400A9A5A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AEDF0B029E1535400A9A5A5 /* KollapsUITests.swift in Sources */,
+				3AEDF0B229E1535400A9A5A5 /* KollapsUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3AEDF0A329E1535400A9A5A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AEDF08F29E1535300A9A5A5 /* Kollaps */;
+			targetProxy = 3AEDF0A229E1535400A9A5A5 /* PBXContainerItemProxy */;
+		};
+		3AEDF0AD29E1535400A9A5A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AEDF08F29E1535300A9A5A5 /* Kollaps */;
+			targetProxy = 3AEDF0AC29E1535400A9A5A5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3AEDF0B329E1535400A9A5A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3AEDF0B429E1535400A9A5A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		3AEDF0B629E1535400A9A5A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Kollaps/Kollaps.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Kollaps/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.Cogitri.Kollaps;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3AEDF0B729E1535400A9A5A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Kollaps/Kollaps.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Kollaps/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.Cogitri.Kollaps;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		3AEDF0B929E1535400A9A5A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.Cogitri.KollapsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kollaps.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Kollaps";
+			};
+			name = Debug;
+		};
+		3AEDF0BA29E1535400A9A5A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.Cogitri.KollapsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kollaps.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Kollaps";
+			};
+			name = Release;
+		};
+		3AEDF0BC29E1535400A9A5A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.Cogitri.KollapsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Kollaps;
+			};
+			name = Debug;
+		};
+		3AEDF0BD29E1535400A9A5A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.Cogitri.KollapsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Kollaps;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3AEDF08B29E1535300A9A5A5 /* Build configuration list for PBXProject "Kollaps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AEDF0B329E1535400A9A5A5 /* Debug */,
+				3AEDF0B429E1535400A9A5A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AEDF0B529E1535400A9A5A5 /* Build configuration list for PBXNativeTarget "Kollaps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AEDF0B629E1535400A9A5A5 /* Debug */,
+				3AEDF0B729E1535400A9A5A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AEDF0B829E1535400A9A5A5 /* Build configuration list for PBXNativeTarget "KollapsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AEDF0B929E1535400A9A5A5 /* Debug */,
+				3AEDF0BA29E1535400A9A5A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AEDF0BB29E1535400A9A5A5 /* Build configuration list for PBXNativeTarget "KollapsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AEDF0BC29E1535400A9A5A5 /* Debug */,
+				3AEDF0BD29E1535400A9A5A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3AEDF08829E1535300A9A5A5 /* Project object */;
+}
