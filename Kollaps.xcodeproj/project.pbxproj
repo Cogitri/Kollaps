@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A6E026329F2A8FC00F6F321 /* SendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E026229F2A8FC00F6F321 /* SendView.swift */; };
+		3A6E026529F2B1B400F6F321 /* SenderFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E026429F2B1B400F6F321 /* SenderFile.swift */; };
+		3A6E026929F7EDFA00F6F321 /* WormholeWilliam.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A6E026829F7EDFA00F6F321 /* WormholeWilliam.xcframework */; };
 		3AEDF09429E1535300A9A5A5 /* KollapsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDF09329E1535300A9A5A5 /* KollapsApp.swift */; };
 		3AEDF09629E1535300A9A5A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDF09529E1535300A9A5A5 /* ContentView.swift */; };
 		3AEDF09829E1535400A9A5A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AEDF09729E1535400A9A5A5 /* Assets.xcassets */; };
@@ -14,6 +17,9 @@
 		3AEDF0A629E1535400A9A5A5 /* KollapsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDF0A529E1535400A9A5A5 /* KollapsTests.swift */; };
 		3AEDF0B029E1535400A9A5A5 /* KollapsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDF0AF29E1535400A9A5A5 /* KollapsUITests.swift */; };
 		3AEDF0B229E1535400A9A5A5 /* KollapsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDF0B129E1535400A9A5A5 /* KollapsUITestsLaunchTests.swift */; };
+		3AEDF0C029E1537600A9A5A5 /* SenderBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDF0BF29E1537600A9A5A5 /* SenderBase.swift */; };
+		3AEDF0C229E1538C00A9A5A5 /* SenderText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDF0C129E1538C00A9A5A5 /* SenderText.swift */; };
+		3AEDF0C629E1554700A9A5A5 /* ReceiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDF0C529E1554700A9A5A5 /* ReceiveView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A6E026229F2A8FC00F6F321 /* SendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendView.swift; sourceTree = "<group>"; };
+		3A6E026429F2B1B400F6F321 /* SenderFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderFile.swift; sourceTree = "<group>"; };
+		3A6E026829F7EDFA00F6F321 /* WormholeWilliam.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = WormholeWilliam.xcframework; path = ../WormholeWilliamSwift/Frameworks/WormholeWilliam.xcframework; sourceTree = "<group>"; };
 		3AEDF09029E1535300A9A5A5 /* Kollaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kollaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AEDF09329E1535300A9A5A5 /* KollapsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KollapsApp.swift; sourceTree = "<group>"; };
 		3AEDF09529E1535300A9A5A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +54,9 @@
 		3AEDF0AB29E1535400A9A5A5 /* KollapsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KollapsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AEDF0AF29E1535400A9A5A5 /* KollapsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KollapsUITests.swift; sourceTree = "<group>"; };
 		3AEDF0B129E1535400A9A5A5 /* KollapsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KollapsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3AEDF0BF29E1537600A9A5A5 /* SenderBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderBase.swift; sourceTree = "<group>"; };
+		3AEDF0C129E1538C00A9A5A5 /* SenderText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderText.swift; sourceTree = "<group>"; };
+		3AEDF0C529E1554700A9A5A5 /* ReceiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A6E026929F7EDFA00F6F321 /* WormholeWilliam.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +88,8 @@
 		3AEDF08729E1535300A9A5A5 = {
 			isa = PBXGroup;
 			children = (
+				3A6E026829F7EDFA00F6F321 /* WormholeWilliam.xcframework */,
+				3AEDF0BE29E1535F00A9A5A5 /* Wormhole */,
 				3AEDF09229E1535300A9A5A5 /* Kollaps */,
 				3AEDF0A429E1535400A9A5A5 /* KollapsTests */,
 				3AEDF0AE29E1535400A9A5A5 /* KollapsUITests */,
@@ -99,7 +114,9 @@
 				3AEDF09529E1535300A9A5A5 /* ContentView.swift */,
 				3AEDF09729E1535400A9A5A5 /* Assets.xcassets */,
 				3AEDF09C29E1535400A9A5A5 /* Kollaps.entitlements */,
+				3AEDF0C529E1554700A9A5A5 /* ReceiveView.swift */,
 				3AEDF09929E1535400A9A5A5 /* Preview Content */,
+				3A6E026229F2A8FC00F6F321 /* SendView.swift */,
 			);
 			path = Kollaps;
 			sourceTree = "<group>";
@@ -127,6 +144,16 @@
 				3AEDF0B129E1535400A9A5A5 /* KollapsUITestsLaunchTests.swift */,
 			);
 			path = KollapsUITests;
+			sourceTree = "<group>";
+		};
+		3AEDF0BE29E1535F00A9A5A5 /* Wormhole */ = {
+			isa = PBXGroup;
+			children = (
+				3AEDF0BF29E1537600A9A5A5 /* SenderBase.swift */,
+				3AEDF0C129E1538C00A9A5A5 /* SenderText.swift */,
+				3A6E026429F2B1B400F6F321 /* SenderFile.swift */,
+			);
+			path = Wormhole;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +287,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AEDF09629E1535300A9A5A5 /* ContentView.swift in Sources */,
+				3A6E026529F2B1B400F6F321 /* SenderFile.swift in Sources */,
+				3AEDF0C229E1538C00A9A5A5 /* SenderText.swift in Sources */,
+				3A6E026329F2A8FC00F6F321 /* SendView.swift in Sources */,
+				3AEDF0C629E1554700A9A5A5 /* ReceiveView.swift in Sources */,
+				3AEDF0C029E1537600A9A5A5 /* SenderBase.swift in Sources */,
 				3AEDF09429E1535300A9A5A5 /* KollapsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
