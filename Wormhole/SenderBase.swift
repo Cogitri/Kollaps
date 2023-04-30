@@ -19,11 +19,11 @@ class SenderBaseClass {
 
     public func finish() {
         var error: NSError?;
-        WormholeWilliamFinishSend(ctx, &error);
+        WormholeWilliamSenderContextFinishSend(ctx, &error);
     }
     
     internal var code: String {
-        return WormholeWilliamGetCode(self.ctx);
+        return WormholeWilliamSenderContextGetCode(self.ctx);
     }
     
     internal var ctx: WormholeWilliamSenderContext;

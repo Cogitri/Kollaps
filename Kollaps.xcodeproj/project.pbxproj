@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E4818E84080C2CB33446D6A /* Pods_KollapsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9C614B3FB0D3A2719FF15E /* Pods_KollapsTests.framework */; };
+		38CB43B5D32A856E9B9AFDC4 /* Pods_Kollaps_KollapsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CC89291128D6710A925677 /* Pods_Kollaps_KollapsUITests.framework */; };
 		3A6E026329F2A8FC00F6F321 /* SendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E026229F2A8FC00F6F321 /* SendView.swift */; };
 		3A6E026529F2B1B400F6F321 /* SenderFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E026429F2B1B400F6F321 /* SenderFile.swift */; };
-		3A6E026929F7EDFA00F6F321 /* WormholeWilliam.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A6E026829F7EDFA00F6F321 /* WormholeWilliam.xcframework */; };
 		3A6E026B29F8331700F6F321 /* ReceiveCodeEnterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E026A29F8331700F6F321 /* ReceiveCodeEnterView.swift */; };
 		3A6E026D29F835B100F6F321 /* ReceiveConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E026C29F835B100F6F321 /* ReceiveConfirmView.swift */; };
 		3A6E026F29F835D900F6F321 /* ReceiveFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E026E29F835D900F6F321 /* ReceiveFileView.swift */; };
@@ -24,6 +25,7 @@
 		3AEDF0C029E1537600A9A5A5 /* SenderBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDF0BF29E1537600A9A5A5 /* SenderBase.swift */; };
 		3AEDF0C229E1538C00A9A5A5 /* SenderText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDF0C129E1538C00A9A5A5 /* SenderText.swift */; };
 		3AEDF0C629E1554700A9A5A5 /* ReceiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDF0C529E1554700A9A5A5 /* ReceiveView.swift */; };
+		BA87F56F11291F3497C70A9A /* Pods_Kollaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF913E0A4630A955C9B74778 /* Pods_Kollaps.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,9 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B84E838CB1AC1E870406618 /* Pods-KollapsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KollapsTests.release.xcconfig"; path = "Target Support Files/Pods-KollapsTests/Pods-KollapsTests.release.xcconfig"; sourceTree = "<group>"; };
+		1043D02CCCD92B18CC598531 /* Pods-Kollaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kollaps.release.xcconfig"; path = "Target Support Files/Pods-Kollaps/Pods-Kollaps.release.xcconfig"; sourceTree = "<group>"; };
+		142F3236D48427A9CB62581F /* Pods-Kollaps-KollapsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kollaps-KollapsUITests.release.xcconfig"; path = "Target Support Files/Pods-Kollaps-KollapsUITests/Pods-Kollaps-KollapsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		27CC89291128D6710A925677 /* Pods_Kollaps_KollapsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kollaps_KollapsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A6E026229F2A8FC00F6F321 /* SendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendView.swift; sourceTree = "<group>"; };
 		3A6E026429F2B1B400F6F321 /* SenderFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderFile.swift; sourceTree = "<group>"; };
-		3A6E026829F7EDFA00F6F321 /* WormholeWilliam.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = WormholeWilliam.xcframework; path = ../WormholeWilliamSwift/Frameworks/WormholeWilliam.xcframework; sourceTree = "<group>"; };
 		3A6E026A29F8331700F6F321 /* ReceiveCodeEnterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveCodeEnterView.swift; sourceTree = "<group>"; };
 		3A6E026C29F835B100F6F321 /* ReceiveConfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveConfirmView.swift; sourceTree = "<group>"; };
 		3A6E026E29F835D900F6F321 /* ReceiveFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveFileView.swift; sourceTree = "<group>"; };
@@ -65,6 +70,11 @@
 		3AEDF0BF29E1537600A9A5A5 /* SenderBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderBase.swift; sourceTree = "<group>"; };
 		3AEDF0C129E1538C00A9A5A5 /* SenderText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderText.swift; sourceTree = "<group>"; };
 		3AEDF0C529E1554700A9A5A5 /* ReceiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveView.swift; sourceTree = "<group>"; };
+		41AD06D1FA261DAA98E0F1C6 /* Pods-Kollaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kollaps.debug.xcconfig"; path = "Target Support Files/Pods-Kollaps/Pods-Kollaps.debug.xcconfig"; sourceTree = "<group>"; };
+		4DDE44B0F5EC946B8AB9C155 /* Pods-Kollaps-KollapsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kollaps-KollapsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Kollaps-KollapsUITests/Pods-Kollaps-KollapsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		591F804D667FEB313E30C772 /* Pods-KollapsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KollapsTests.debug.xcconfig"; path = "Target Support Files/Pods-KollapsTests/Pods-KollapsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7E9C614B3FB0D3A2719FF15E /* Pods_KollapsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KollapsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF913E0A4630A955C9B74778 /* Pods_Kollaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kollaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A6E026929F7EDFA00F6F321 /* WormholeWilliam.xcframework in Frameworks */,
+				BA87F56F11291F3497C70A9A /* Pods_Kollaps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E4818E84080C2CB33446D6A /* Pods_KollapsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38CB43B5D32A856E9B9AFDC4 /* Pods_Kollaps_KollapsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,12 +119,13 @@
 			isa = PBXGroup;
 			children = (
 				3A6E026E29F835D900F6F321 /* ReceiveFileView.swift */,
-				3A6E026829F7EDFA00F6F321 /* WormholeWilliam.xcframework */,
 				3AEDF0BE29E1535F00A9A5A5 /* Wormhole */,
 				3AEDF09229E1535300A9A5A5 /* Kollaps */,
 				3AEDF0A429E1535400A9A5A5 /* KollapsTests */,
 				3AEDF0AE29E1535400A9A5A5 /* KollapsUITests */,
 				3AEDF09129E1535300A9A5A5 /* Products */,
+				E050E6CCE3B35391FB4A12FC /* Pods */,
+				5911D5EE8FD7CA7E27E00FF8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -176,6 +189,29 @@
 			path = Wormhole;
 			sourceTree = "<group>";
 		};
+		5911D5EE8FD7CA7E27E00FF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF913E0A4630A955C9B74778 /* Pods_Kollaps.framework */,
+				27CC89291128D6710A925677 /* Pods_Kollaps_KollapsUITests.framework */,
+				7E9C614B3FB0D3A2719FF15E /* Pods_KollapsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E050E6CCE3B35391FB4A12FC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				41AD06D1FA261DAA98E0F1C6 /* Pods-Kollaps.debug.xcconfig */,
+				1043D02CCCD92B18CC598531 /* Pods-Kollaps.release.xcconfig */,
+				4DDE44B0F5EC946B8AB9C155 /* Pods-Kollaps-KollapsUITests.debug.xcconfig */,
+				142F3236D48427A9CB62581F /* Pods-Kollaps-KollapsUITests.release.xcconfig */,
+				591F804D667FEB313E30C772 /* Pods-KollapsTests.debug.xcconfig */,
+				0B84E838CB1AC1E870406618 /* Pods-KollapsTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,6 +219,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AEDF0B529E1535400A9A5A5 /* Build configuration list for PBXNativeTarget "Kollaps" */;
 			buildPhases = (
+				98FE9CE7A49DED26B0683954 /* [CP] Check Pods Manifest.lock */,
 				3AEDF08C29E1535300A9A5A5 /* Sources */,
 				3AEDF08D29E1535300A9A5A5 /* Frameworks */,
 				3AEDF08E29E1535300A9A5A5 /* Resources */,
@@ -200,6 +237,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AEDF0B829E1535400A9A5A5 /* Build configuration list for PBXNativeTarget "KollapsTests" */;
 			buildPhases = (
+				F33E95553BD871952F3A5938 /* [CP] Check Pods Manifest.lock */,
 				3AEDF09D29E1535400A9A5A5 /* Sources */,
 				3AEDF09E29E1535400A9A5A5 /* Frameworks */,
 				3AEDF09F29E1535400A9A5A5 /* Resources */,
@@ -218,6 +256,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AEDF0BB29E1535400A9A5A5 /* Build configuration list for PBXNativeTarget "KollapsUITests" */;
 			buildPhases = (
+				F0D80E23AE8F298B52A6CAAF /* [CP] Check Pods Manifest.lock */,
 				3AEDF0A729E1535400A9A5A5 /* Sources */,
 				3AEDF0A829E1535400A9A5A5 /* Frameworks */,
 				3AEDF0A929E1535400A9A5A5 /* Resources */,
@@ -300,6 +339,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		98FE9CE7A49DED26B0683954 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kollaps-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0D80E23AE8F298B52A6CAAF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kollaps-KollapsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F33E95553BD871952F3A5938 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KollapsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3AEDF08C29E1535300A9A5A5 /* Sources */ = {
@@ -468,6 +576,7 @@
 		};
 		3AEDF0B629E1535400A9A5A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41AD06D1FA261DAA98E0F1C6 /* Pods-Kollaps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -493,6 +602,7 @@
 		};
 		3AEDF0B729E1535400A9A5A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1043D02CCCD92B18CC598531 /* Pods-Kollaps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -518,6 +628,7 @@
 		};
 		3AEDF0B929E1535400A9A5A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 591F804D667FEB313E30C772 /* Pods-KollapsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -536,6 +647,7 @@
 		};
 		3AEDF0BA29E1535400A9A5A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B84E838CB1AC1E870406618 /* Pods-KollapsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -554,6 +666,7 @@
 		};
 		3AEDF0BC29E1535400A9A5A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DDE44B0F5EC946B8AB9C155 /* Pods-Kollaps-KollapsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -570,6 +683,7 @@
 		};
 		3AEDF0BD29E1535400A9A5A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 142F3236D48427A9CB62581F /* Pods-Kollaps-KollapsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
