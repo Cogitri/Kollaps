@@ -49,12 +49,12 @@ struct ReceiveConfirmView : View {
     func fetchData(_ ctx: WormholeWilliamReceiverContext, _ code: String) {
         Task.detached {
             var error: NSError? = nil;
-            WormholeWilliamInitReceive(ctx, code, &error);
+            WormholeWilliamReceiverContextInitReceive(ctx, code, &error);
             if error != nil {
                 await self.updateUI(0, nil, error);
             } else {
-                let size = WormholeWilliamGetSize(ctx);
-                let fileName = WormholeWilliamGetName(ctx);
+                let size = WormholeWilliamReceiverContextGetSize(ctx);
+                let fileName = WormholeWilliamReceiverContextGetName(ctx);
                 await self.updateUI(size, fileName, error);
             }
         }

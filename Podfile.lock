@@ -1,0 +1,16 @@
+PODS:
+  - WormholeWilliam (0.0.1)
+
+DEPENDENCIES:
+  - WormholeWilliam (= 0.0.1)
+
+SPEC REPOS:
+  trunk:
+    - WormholeWilliam
+
+SPEC CHECKSUMS:
+  WormholeWilliam: ff15a0bcf9e6648a4ca615087808c696f4ec7684
+
+PODFILE CHECKSUM: 22d2469577fcd3cbcd90a5e68d6dea6864361ec6
+
+COCOAPODS: 1.12.1

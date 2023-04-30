@@ -34,7 +34,7 @@ struct ReceiveFileView : View {
     
     func receiveData() {
         var error: NSError?;
-        WormholeWilliamReceiveFile(ctx, url, &error);
+        WormholeWilliamReceiverContextReceiveFile(ctx, url, &error);
         
     }
 }
