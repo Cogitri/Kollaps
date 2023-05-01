@@ -10,7 +10,7 @@ import SwiftUI
 struct ReceiveCodeEnterView: View {
     @State private var isError = false;
     @Binding var code: String;
-    var doneCallback: () -> Void;
+    var doneCallback = {}
 
     var body: some View {
         VStack {
@@ -22,21 +22,30 @@ struct ReceiveCodeEnterView: View {
             Text("Receive data")
                 .font(.title)
 
-            TextField("Receive code", text: $code)
+            TextField("Receive code", text: $code, prompt: Text("Receive code"))
+                .onSubmit {
+                    validateCode()
+                }
             
             if isError {
                 Text("Code is invalid!");
             }
             
             Button("Next", action: {
-                print(code)
                 validateCode()
             })
         }
         .padding()
     }
     
+    func onCompleted(_ action: @escaping () -> Void) -> Self {
+        var copy = self;
+        copy.doneCallback = action
+        return copy
+    }
+    
     private func validateCode() {
+        print(code)
         let passwordRegex = /[0-9]-[a-z]+-[a-z]+/
         if (code.contains(passwordRegex)) {
             doneCallback();
@@ -49,6 +58,6 @@ struct ReceiveCodeEnterView: View {
 
 struct ReceiveCodeEnterView_Previews: PreviewProvider {
     static var previews: some View {
-        ReceiveCodeEnterView(code: .constant("Test"), doneCallback: {});
+        ReceiveCodeEnterView(code: .constant("1-d-w"));
     }
 }
