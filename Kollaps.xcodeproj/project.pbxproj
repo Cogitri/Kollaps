@@ -108,6 +108,7 @@
 		3A6E027029FA5DD500F6F321 /* Receive */ = {
 			isa = PBXGroup;
 			children = (
+				3A6E026E29F835D900F6F321 /* ReceiveFileView.swift */,
 				3A6E026A29F8331700F6F321 /* ReceiveCodeEnterView.swift */,
 				3A6E026C29F835B100F6F321 /* ReceiveConfirmView.swift */,
 				3AEDF0C529E1554700A9A5A5 /* ReceiveView.swift */,
@@ -118,7 +119,6 @@
 		3AEDF08729E1535300A9A5A5 = {
 			isa = PBXGroup;
 			children = (
-				3A6E026E29F835D900F6F321 /* ReceiveFileView.swift */,
 				3AEDF0BE29E1535F00A9A5A5 /* Wormhole */,
 				3AEDF09229E1535300A9A5A5 /* Kollaps */,
 				3AEDF0A429E1535400A9A5A5 /* KollapsTests */,

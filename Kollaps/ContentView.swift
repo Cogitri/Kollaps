@@ -9,10 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        HStack {
-            ReceiveView()
-            Divider()
-            SendView()
+        TabView {
+            ReceiveView().tabItem({ Text("Receive Data") })
+            SendView().tabItem({ Text("Send Data") })
         }
         .padding()
     }
