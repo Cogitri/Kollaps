@@ -22,10 +22,11 @@ struct ReceiveCodeEnterView: View {
             Text("Receive data")
                 .font(.title)
 
-            TextField("Receive code", text: $code, prompt: Text("Receive code"))
+            TextField("Receive code", text: $code, prompt: Text("Receive code (e.g. 7-crossover-clockwork)"))
                 .onSubmit {
                     validateCode()
                 }
+                .frame(width: 350)
             
             if isError {
                 Text("Code is invalid!");
@@ -58,6 +59,6 @@ struct ReceiveCodeEnterView: View {
 
 struct ReceiveCodeEnterView_Previews: PreviewProvider {
     static var previews: some View {
-        ReceiveCodeEnterView(code: .constant("1-d-w"));
+        ReceiveCodeEnterView(code: .constant("7-crossover-clockwork"));
     }
 }

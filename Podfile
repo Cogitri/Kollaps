@@ -7,6 +7,7 @@ target 'Kollaps' do
 
   # Pods for Kollaps
   pod 'WormholeWilliam', '0.0.1'
+  pod 'SwifterSwift/SwiftStdlib'
 
   target 'KollapsTests' do
     inherit! :search_paths

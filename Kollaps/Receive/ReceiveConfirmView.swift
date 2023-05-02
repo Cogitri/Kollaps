@@ -7,11 +7,14 @@
 
 import SwiftUI
 import WormholeWilliam
+import SwifterSwift
 
 struct ReceiveConfirmView : View {
     @State var size: Int64 = 0;
     @State var fileName: String? = nil;
     @State var error: NSError? = nil;
+    let ctx: WormholeWilliamReceiverContext;
+    let code: String;
     @Binding var url: URL?;
     let onChangeFunc: (Bool) -> Void;
     
@@ -34,16 +37,16 @@ struct ReceiveConfirmView : View {
                 ProgressView()
             }
         }
+        .task({
+            self.fetchData(ctx, code)
+        })
     }
     
     @MainActor
-    func updateUI(_ size: Int64, _ fileName: String?, _ error: NSError?) async {
-        if let e = error {
-            self.error = e;
-        } else {
-            self.size = size;
-            self.fileName = fileName;
-        }
+    func updateUI(size: Int64 = 0, fileName: String? = nil, error: NSError? = nil) async {
+        self.error = error;
+        self.size = size;
+        self.fileName = fileName;
     }
     
     func fetchData(_ ctx: WormholeWilliamReceiverContext, _ code: String) {
@@ -51,11 +54,11 @@ struct ReceiveConfirmView : View {
             var error: NSError? = nil;
             WormholeWilliamReceiverContextInitReceive(ctx, code, &error);
             if error != nil {
-                await self.updateUI(0, nil, error);
+                await self.updateUI(error: error);
             } else {
                 let size = WormholeWilliamReceiverContextGetSize(ctx);
                 let fileName = WormholeWilliamReceiverContextGetName(ctx);
-                await self.updateUI(size, fileName, error);
+                await self.updateUI(size: size, fileName: fileName);
             }
         }
     }

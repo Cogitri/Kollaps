@@ -30,18 +30,13 @@ struct ReceiveView: View {
             destination = .ConfirmView
         }
         case .ConfirmView:
-            { () -> ReceiveConfirmView in
-                let c = ReceiveConfirmView(url: $url) {
+            ReceiveConfirmView(ctx: ctx!, code: code, url: $url) {
                     if $0 {
                         path.append(Destination.ReceiveView);
                     } else {
                         path.append(Destination.RejectedView)
                     }
-                };
-                assert(self.code != "")
-                c.fetchData(ctx!, self.code);
-                return c
-            }()
+                }
         case .ReceiveView:
             ReceiveView();
         case .RejectedView:
