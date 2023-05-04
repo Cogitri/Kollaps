@@ -8,13 +8,13 @@
 import SwiftUI
 import WormholeWilliam
 
-struct ReceiveResultView : View {
-    @State private var error: NSError?;
-    @State var ctx: WormholeWilliamReceiverContext;
-    @State var url: URL;
-    @State var isInitialised = false;
-    @State var isDone = false;
-    
+struct ReceiveResultView: View {
+    @State private var error: NSError?
+    @State var ctx: WormholeWilliamReceiverContext
+    @State var url: URL
+    @State var isInitialised = false
+    @State var isDone = false
+
     var body: some View {
         VStack {
             if !isDone {
@@ -31,16 +31,16 @@ struct ReceiveResultView : View {
             self.finishReceive()
         })
     }
-    
-    func finishReceive() {
-        if (isInitialised) {
-            return;
-        }
-        isInitialised = true;
 
-        var error: NSError? = nil;
-        WormholeWilliamReceiverContextReceiveFile(ctx, url.path(), &error);
-        self.error = error;
-        isDone = true;
+    func finishReceive() {
+        if isInitialised {
+            return
+        }
+        isInitialised = true
+
+        var error: NSError?
+        WormholeWilliamReceiverContextReceiveFile(ctx, url.path(), &error)
+        self.error = error
+        isDone = true
     }
 }

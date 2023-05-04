@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ReceiveCodeEnterView: View {
-    @State private var isError = false;
-    @Binding var code: String;
+    @State private var isError = false
+    @Binding var code: String
     var doneCallback = {}
 
     var body: some View {
@@ -18,7 +18,7 @@ struct ReceiveCodeEnterView: View {
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
                 .padding()
-            
+
             Text("Receive data")
                 .font(.title)
 
@@ -27,38 +27,37 @@ struct ReceiveCodeEnterView: View {
                     validateCode()
                 }
                 .frame(width: 350)
-            
+
             if isError {
-                Text("Code is invalid!");
+                Text("Code is invalid!")
             }
-            
+
             Button("Next", action: {
                 validateCode()
             })
         }
         .padding()
     }
-    
+
     func onCompleted(_ action: @escaping () -> Void) -> Self {
-        var copy = self;
+        var copy = self
         copy.doneCallback = action
         return copy
     }
-    
+
     private func validateCode() {
         print(code)
         let passwordRegex = /[0-9]-[a-z]+-[a-z]+/
-        if (code.contains(passwordRegex)) {
-            doneCallback();
+        if code.contains(passwordRegex) {
+            doneCallback()
         } else {
-            isError = true;
+            isError = true
         }
     }
 }
 
-
 struct ReceiveCodeEnterView_Previews: PreviewProvider {
     static var previews: some View {
-        ReceiveCodeEnterView(code: .constant("7-crossover-clockwork"));
+        ReceiveCodeEnterView(code: .constant("7-crossover-clockwork"))
     }
 }

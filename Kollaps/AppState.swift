@@ -10,4 +10,3 @@ import SwiftUI
 class AppState: ObservableObject {
     @Published var queue = DispatchQueue(label: "wormhole-runner")
 }
-

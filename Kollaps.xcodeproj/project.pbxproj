@@ -227,6 +227,7 @@
 				3AEDF08D29E1535300A9A5A5 /* Frameworks */,
 				3AEDF08E29E1535300A9A5A5 /* Resources */,
 				186C907CA3C9AE6F6FD4AD8F /* [CP] Embed Pods Frameworks */,
+				3A38AA0E2A03C39A001C0420 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -362,6 +363,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kollaps/Pods-Kollaps-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		3A38AA0E2A03C39A001C0420 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		98FE9CE7A49DED26B0683954 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

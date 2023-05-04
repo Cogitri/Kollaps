@@ -8,7 +8,7 @@
 import SwiftUI
 import WormholeWilliam
 
-enum Destination : Hashable {
+enum Destination: Hashable {
     case CodeEnterView
     case ConfirmView
     case ReceiveView
@@ -17,13 +17,13 @@ enum Destination : Hashable {
 }
 
 struct ReceiveView: View {
-    @State private var code: String = "";
-    @State private var codeEntered = false;
-    @State private var isAccepted = false;
-    @State private var ctx = WormholeWilliamNewReceiverContext();
-    @State private var url: URL?;
-    @State private var destination = Destination.CodeEnterView;
-    
+    @State private var code: String = ""
+    @State private var codeEntered = false
+    @State private var isAccepted = false
+    @State private var ctx = WormholeWilliamNewReceiverContext()
+    @State private var url: URL?
+    @State private var destination = Destination.CodeEnterView
+
     var body: some View {
         switch self.destination {
         case .CodeEnterView: ReceiveCodeEnterView(code: $code).onCompleted {
@@ -32,13 +32,13 @@ struct ReceiveView: View {
         case .ConfirmView:
             ReceiveConfirmView(ctx: ctx!, code: code, url: $url) {
                     if $0 {
-                        destination = .ResultView;
+                        destination = .ResultView
                     } else {
-                        destination = .RejectedView;
+                        destination = .RejectedView
                     }
                 }
         case .ReceiveView:
-            ReceiveView();
+            ReceiveView()
         case .RejectedView:
             Text("Rejected the transfer")
         case .ResultView:
@@ -46,7 +46,6 @@ struct ReceiveView: View {
         }
     }
 }
-
 
 struct ReceiveView_Previews: PreviewProvider {
     static var previews: some View {

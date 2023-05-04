@@ -8,13 +8,13 @@
 import Foundation
 import WormholeWilliam
 
-class SenderText : SenderBase {
+class SenderText: SenderBase {
     func prepare(con text: String) throws -> String {
-        var error: NSError?;
-        WormholeWilliamPrepareSendText(self.ctx, text, &error);
+        var error: NSError?
+        WormholeWilliamPrepareSendText(self.ctx, text, &error)
         if let error {
-            throw error;
+            throw error
         }
-        return self.code;
+        return self.code
     }
 }
