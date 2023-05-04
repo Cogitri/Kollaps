@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1E4818E84080C2CB33446D6A /* Pods_KollapsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9C614B3FB0D3A2719FF15E /* Pods_KollapsTests.framework */; };
 		38CB43B5D32A856E9B9AFDC4 /* Pods_Kollaps_KollapsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CC89291128D6710A925677 /* Pods_Kollaps_KollapsUITests.framework */; };
+		3A38AA0D2A01D423001C0420 /* ReceiveResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38AA0C2A01D423001C0420 /* ReceiveResultView.swift */; };
 		3A6E026329F2A8FC00F6F321 /* SendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E026229F2A8FC00F6F321 /* SendView.swift */; };
 		3A6E026529F2B1B400F6F321 /* SenderFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E026429F2B1B400F6F321 /* SenderFile.swift */; };
 		3A6E026B29F8331700F6F321 /* ReceiveCodeEnterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E026A29F8331700F6F321 /* ReceiveCodeEnterView.swift */; };
@@ -50,6 +51,7 @@
 		1043D02CCCD92B18CC598531 /* Pods-Kollaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kollaps.release.xcconfig"; path = "Target Support Files/Pods-Kollaps/Pods-Kollaps.release.xcconfig"; sourceTree = "<group>"; };
 		142F3236D48427A9CB62581F /* Pods-Kollaps-KollapsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kollaps-KollapsUITests.release.xcconfig"; path = "Target Support Files/Pods-Kollaps-KollapsUITests/Pods-Kollaps-KollapsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		27CC89291128D6710A925677 /* Pods_Kollaps_KollapsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kollaps_KollapsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A38AA0C2A01D423001C0420 /* ReceiveResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveResultView.swift; sourceTree = "<group>"; };
 		3A6E026229F2A8FC00F6F321 /* SendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendView.swift; sourceTree = "<group>"; };
 		3A6E026429F2B1B400F6F321 /* SenderFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderFile.swift; sourceTree = "<group>"; };
 		3A6E026A29F8331700F6F321 /* ReceiveCodeEnterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveCodeEnterView.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				3A6E026A29F8331700F6F321 /* ReceiveCodeEnterView.swift */,
 				3A6E026C29F835B100F6F321 /* ReceiveConfirmView.swift */,
 				3AEDF0C529E1554700A9A5A5 /* ReceiveView.swift */,
+				3A38AA0C2A01D423001C0420 /* ReceiveResultView.swift */,
 			);
 			path = Receive;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				3AEDF0C029E1537600A9A5A5 /* SenderBase.swift in Sources */,
 				3A6E026F29F835D900F6F321 /* ReceiveFileView.swift in Sources */,
 				3AEDF09429E1535300A9A5A5 /* KollapsApp.swift in Sources */,
+				3A38AA0D2A01D423001C0420 /* ReceiveResultView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,7 +674,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 591F804D667FEB313E30C772 /* Pods-KollapsTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -690,7 +693,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0B84E838CB1AC1E870406618 /* Pods-KollapsTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -710,7 +712,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4DDE44B0F5EC946B8AB9C155 /* Pods-Kollaps-KollapsUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
@@ -728,7 +729,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 142F3236D48427A9CB62581F /* Pods-Kollaps-KollapsUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;

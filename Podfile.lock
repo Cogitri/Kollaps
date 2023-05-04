@@ -1,10 +1,10 @@
 PODS:
   - SwifterSwift/SwiftStdlib (5.2.0)
-  - WormholeWilliam (0.0.1)
+  - WormholeWilliam (0.0.4)
 
 DEPENDENCIES:
   - SwifterSwift/SwiftStdlib
-  - WormholeWilliam (= 0.0.1)
+  - WormholeWilliam (~> 0.0.4)
 
 SPEC REPOS:
   trunk:
@@ -13,8 +13,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
-  WormholeWilliam: ff15a0bcf9e6648a4ca615087808c696f4ec7684
+  WormholeWilliam: bbb8b8b9a9e59a8fceedd08becc29a069564b75b
 
-PODFILE CHECKSUM: f2ac6a56b11a7478564b038786837008550ed735
+PODFILE CHECKSUM: 7d50b9f3c430285eed868a4d13032dcfdfeb3684
 
 COCOAPODS: 1.12.1

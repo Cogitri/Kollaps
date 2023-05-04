@@ -13,6 +13,7 @@ enum Destination : Hashable {
     case ConfirmView
     case ReceiveView
     case RejectedView
+    case ResultView
 }
 
 struct ReceiveView: View {
@@ -21,7 +22,6 @@ struct ReceiveView: View {
     @State private var isAccepted = false;
     @State private var ctx = WormholeWilliamNewReceiverContext();
     @State private var url: URL?;
-    @State private var path = NavigationPath();
     @State private var destination = Destination.CodeEnterView;
     
     var body: some View {
@@ -32,15 +32,17 @@ struct ReceiveView: View {
         case .ConfirmView:
             ReceiveConfirmView(ctx: ctx!, code: code, url: $url) {
                     if $0 {
-                        path.append(Destination.ReceiveView);
+                        destination = .ResultView;
                     } else {
-                        path.append(Destination.RejectedView)
+                        destination = .RejectedView;
                     }
                 }
         case .ReceiveView:
             ReceiveView();
         case .RejectedView:
             Text("Rejected the transfer")
+        case .ResultView:
+            ReceiveResultView(ctx: ctx!, url: url!)
         }
     }
 }

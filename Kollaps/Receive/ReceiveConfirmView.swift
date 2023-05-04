@@ -13,6 +13,7 @@ struct ReceiveConfirmView : View {
     @State var size: Int64 = 0;
     @State var fileName: String? = nil;
     @State var error: NSError? = nil;
+    @State var isInitialised = false;
     let ctx: WormholeWilliamReceiverContext;
     let code: String;
     @Binding var url: URL?;
@@ -23,11 +24,15 @@ struct ReceiveConfirmView : View {
             if error != nil {
                 Text("Couldn't initialise receiver: \(error!)")
             } else if size != 0 && fileName != nil {
-                Text("Your peer wants to send you \"\(self.fileName ?? "Unknown")\" (size: \(self.size)).")
+                Text("Your peer wants to send you \"\(self.fileName ?? "Unknown")\" (size: \(self.size)MB).")
                 HStack {
                     Button("Accept", action: {
+                        var url = self.openFileSelector()
+                        if let u = url {
+                            url = u.appendingPathComponent(fileName ?? "Unknown")
+                        }
+                        self.url = url;
                         self.onChangeFunc(true);
-                        self.url = self.openFileSelector()
                     })
                     Button("Decline", action: {
                         self.onChangeFunc(false);
@@ -50,9 +55,14 @@ struct ReceiveConfirmView : View {
     }
     
     func fetchData(_ ctx: WormholeWilliamReceiverContext, _ code: String) {
+        if (isInitialised) {
+            return
+        }
+        isInitialised = true;
+
         Task.detached {
             var error: NSError? = nil;
-            WormholeWilliamReceiverContextInitReceive(ctx, code, &error);
+            WormholeWilliamReceiverContextInit(ctx, code, &error);
             if error != nil {
                 await self.updateUI(error: error);
             } else {

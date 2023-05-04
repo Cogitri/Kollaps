@@ -6,7 +6,7 @@ target 'Kollaps' do
   use_frameworks!
 
   # Pods for Kollaps
-  pod 'WormholeWilliam', '0.0.1'
+  pod 'WormholeWilliam', '~> 0.0.4'
   pod 'SwifterSwift/SwiftStdlib'
 
   target 'KollapsTests' do
