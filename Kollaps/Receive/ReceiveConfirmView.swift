@@ -7,7 +7,6 @@
 
 import SwiftUI
 import WormholeWilliam
-import SwifterSwift
 
 struct ReceiveConfirmView: View {
     @State var size: Int64 = 0
