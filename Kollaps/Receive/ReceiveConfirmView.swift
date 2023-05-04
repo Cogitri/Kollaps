@@ -28,8 +28,8 @@ struct ReceiveConfirmView: View {
                 HStack {
                     Button("Accept", action: {
                         var url = self.openFileSelector()
-                        if let u = url {
-                            url = u.appendingPathComponent(fileName ?? "Unknown")
+                        if let uri = url {
+                            url = uri.appendingPathComponent(fileName ?? "Unknown")
                         }
                         self.url = url
                         self.onChangeFunc(true)

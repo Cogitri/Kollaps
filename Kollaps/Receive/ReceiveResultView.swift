@@ -20,8 +20,8 @@ struct ReceiveResultView: View {
             if !isDone {
                 ProgressView()
             } else {
-                if let e = error {
-                    Text("Couldn't receive file due to error \(e).")
+                if let msg = error {
+                    Text("Couldn't receive file due to error \(msg).")
                 } else {
                     Text("Successfully received file.")
                 }

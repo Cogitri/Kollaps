@@ -11,7 +11,7 @@ struct SendView: View {
     @State private var code = ""
 
     var body: some View {
-        if code == "" {
+        if code.isEmpty {
             SendSelectView(code: $code)
         } else {
             SendCodeView(code: $code)
