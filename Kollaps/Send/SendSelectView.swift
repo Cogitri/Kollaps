@@ -1,26 +1,15 @@
 //
-//  ContentView.swift
+//  SendSelectView.swift
 //  Kollaps
 //
-//  Created by Rasmus Thomsen on 21.04.23.
+//  Created by Rasmus Thomsen on 05.05.23.
 //
 
 import SwiftUI
 
-struct SendView: View {
-    @State private var code = ""
-
-    var body: some View {
-        if code.isEmpty {
-            SendSelectView(code: $code)
-        } else {
-            SendCodeView(code: $code)
-        }
-    }
-}
-
 struct SendSelectView: View {
     @Binding var code: String
+    let sender: SenderBase
 
     var body: some View {
         VStack {
@@ -52,27 +41,9 @@ struct SendSelectView: View {
     }
 
     func sendUrl(_ url: URL) {
-        let sender = SenderText()
-        let code = try? sender.prepare(con: url.absoluteString)
+        let code = try? sender.prepare(con: url.path())
         if code != nil {
             self.code = code!
         }
-    }
-}
-
-struct SendCodeView: View {
-    @Binding var code: String
-
-    var body: some View {
-        Text("Your Transmit Code")
-            .font(.title)
-
-        Text("The receiver needs to enter the code \"\(code)\" to begin the file transfer.")
-    }
-}
-
-struct SendView_Previews: PreviewProvider {
-    static var previews: some View {
-        SendView()
     }
 }

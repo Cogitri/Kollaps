@@ -17,9 +17,13 @@ class SenderBaseClass {
         self.ctx = WormholeWilliamNewSenderContext()!
     }
 
-    public func finish() {
+    public func finish() throws {
         var error: NSError?
         WormholeWilliamSenderContextFinishSend(ctx, &error)
+
+        if let msg = error {
+            throw msg
+        }
     }
 
     internal var code: String {
