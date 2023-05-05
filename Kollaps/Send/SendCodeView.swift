@@ -12,12 +12,15 @@ struct SendCodeView: View {
     @Binding var code: String
     @State private var error: NSError?
     @State private var isInitialised = false
+    @State private var transferDone = false
     let sender: SenderBase
 
     var body: some View {
         VStack {
             if let msg = error {
-                Text("Couldn't send file due to error \(msg)")
+                Text("Couldn't send file due to error \(msg.localizedDescription)")
+            } else if transferDone {
+                Text("Succesfully transfered the file to the peer.")
             } else {
                 Text("Your Transmit Code")
                     .font(.title)
@@ -26,9 +29,7 @@ struct SendCodeView: View {
                 Text("The receiver needs to enter the code \"\(code)\" to begin the file transfer.")
 
                 Button("Copy code") {
-                    let pasteboard = NSPasteboard.general
-                    pasteboard.clearContents()
-                    pasteboard.setString(code, forType: .string)
+                    self.copyCode()
                 }
 
                 ProgressView()
@@ -38,16 +39,31 @@ struct SendCodeView: View {
         })
     }
 
+    func copyCode() {
+        let pasteboard = NSPasteboard.general
+        pasteboard.clearContents()
+        pasteboard.setString(code, forType: .string)
+    }
+
+    @MainActor
+    func updateUI(_ error: NSError? = nil) async {
+        self.error = error
+        self.transferDone = true
+    }
+
     func startSending() {
         if isInitialised {
             return
         }
         isInitialised = true
 
-        do {
-            try sender.finish()
-        } catch let error as NSError {
-            self.error = error
+        Task.detached {
+            do {
+                try sender.finish()
+                await self.updateUI()
+            } catch let error as NSError {
+                await self.updateUI(error)
+            }
         }
     }
 }
