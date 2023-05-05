@@ -12,10 +12,12 @@ struct SendView: View {
     let sender: SenderBase = SenderFile()
 
     var body: some View {
-        if code.isEmpty {
-            SendSelectView(code: $code, sender: sender)
-        } else {
-            SendCodeView(code: $code, sender: sender)
+        VStack {
+            if code.isEmpty {
+                SendSelectView(code: $code, sender: sender)
+            } else {
+                SendCodeView(code: $code, sender: sender)
+            }
         }
     }
 }
