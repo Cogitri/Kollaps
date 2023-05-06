@@ -12,6 +12,9 @@
 		3A38AA0D2A01D423001C0420 /* ReceiveResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38AA0C2A01D423001C0420 /* ReceiveResultView.swift */; };
 		3A38AA112A059FAA001C0420 /* SendSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38AA102A059FAA001C0420 /* SendSelectView.swift */; };
 		3A38AA132A059FCE001C0420 /* SendCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38AA122A059FCE001C0420 /* SendCodeView.swift */; };
+		3A38AA152A0645C9001C0420 /* ReceiverBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38AA142A0645C9001C0420 /* ReceiverBase.swift */; };
+		3A38AA172A064A7F001C0420 /* ReceiverText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38AA162A064A7F001C0420 /* ReceiverText.swift */; };
+		3A38AA192A064A8B001C0420 /* ReceiverFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38AA182A064A8B001C0420 /* ReceiverFile.swift */; };
 		3A6E026329F2A8FC00F6F321 /* SendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E026229F2A8FC00F6F321 /* SendView.swift */; };
 		3A6E026529F2B1B400F6F321 /* SenderFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E026429F2B1B400F6F321 /* SenderFile.swift */; };
 		3A6E026B29F8331700F6F321 /* ReceiveCodeEnterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E026A29F8331700F6F321 /* ReceiveCodeEnterView.swift */; };
@@ -55,6 +58,9 @@
 		3A38AA0C2A01D423001C0420 /* ReceiveResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveResultView.swift; sourceTree = "<group>"; };
 		3A38AA102A059FAA001C0420 /* SendSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendSelectView.swift; sourceTree = "<group>"; };
 		3A38AA122A059FCE001C0420 /* SendCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCodeView.swift; sourceTree = "<group>"; };
+		3A38AA142A0645C9001C0420 /* ReceiverBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverBase.swift; sourceTree = "<group>"; };
+		3A38AA162A064A7F001C0420 /* ReceiverText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverText.swift; sourceTree = "<group>"; };
+		3A38AA182A064A8B001C0420 /* ReceiverFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverFile.swift; sourceTree = "<group>"; };
 		3A6E026229F2A8FC00F6F321 /* SendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendView.swift; sourceTree = "<group>"; };
 		3A6E026429F2B1B400F6F321 /* SenderFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderFile.swift; sourceTree = "<group>"; };
 		3A6E026A29F8331700F6F321 /* ReceiveCodeEnterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveCodeEnterView.swift; sourceTree = "<group>"; };
@@ -199,6 +205,9 @@
 				3AEDF0BF29E1537600A9A5A5 /* SenderBase.swift */,
 				3AEDF0C129E1538C00A9A5A5 /* SenderText.swift */,
 				3A6E026429F2B1B400F6F321 /* SenderFile.swift */,
+				3A38AA142A0645C9001C0420 /* ReceiverBase.swift */,
+				3A38AA162A064A7F001C0420 /* ReceiverText.swift */,
+				3A38AA182A064A8B001C0420 /* ReceiverFile.swift */,
 			);
 			path = Wormhole;
 			sourceTree = "<group>";
@@ -448,6 +457,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A38AA112A059FAA001C0420 /* SendSelectView.swift in Sources */,
+				3A38AA152A0645C9001C0420 /* ReceiverBase.swift in Sources */,
+				3A38AA192A064A8B001C0420 /* ReceiverFile.swift in Sources */,
+				3A38AA172A064A7F001C0420 /* ReceiverText.swift in Sources */,
 				3A6E026D29F835B100F6F321 /* ReceiveConfirmView.swift in Sources */,
 				3AEDF09629E1535300A9A5A5 /* ContentView.swift in Sources */,
 				3A6E026529F2B1B400F6F321 /* SenderFile.swift in Sources */,

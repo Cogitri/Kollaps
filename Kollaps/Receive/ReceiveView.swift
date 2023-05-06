@@ -20,7 +20,7 @@ struct ReceiveView: View {
     @State private var code: String = ""
     @State private var codeEntered = false
     @State private var isAccepted = false
-    @State private var ctx = WormholeWilliamNewReceiverContext()
+    @State private var ctx = ReceiverFile()
     @State private var url: URL?
     @State private var destination = Destination.codeEnterView
 
@@ -30,7 +30,7 @@ struct ReceiveView: View {
             destination = .confirmView
         }
         case .confirmView:
-            ReceiveConfirmView(ctx: ctx!, code: code, url: $url) {
+            ReceiveConfirmView(ctx: ctx, code: code, url: $url) {
                     if $0 {
                         destination = .resultView
                     } else {

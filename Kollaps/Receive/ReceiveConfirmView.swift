@@ -17,12 +17,17 @@ private enum ViewState {
 struct ReceiveConfirmView: View {
     @State private var size: Int64 = 0
     @State private var fileName: String?
-    @State private var isInitialised = false
-    @State private var state = ViewState.prepare
-    let ctx: WormholeWilliamReceiverContext
+    @State fileprivate var isInitialised = false
+    @State fileprivate var state = ViewState.prepare
+    let ctx: ReceiverBase
     let code: String
     @Binding var url: URL?
     let onChangeFunc: (Bool) -> Void
+
+    var humanSize: String {
+        let formatter = ByteCountFormatter()
+        return formatter.string(fromByteCount: self.size * 1000)
+    }
 
     var body: some View {
         VStack {
@@ -30,15 +35,15 @@ struct ReceiveConfirmView: View {
             case .prepare:
                     ProgressView()
             case .done:
-                Text("Your peer wants to send you \"\(self.fileName ?? "Unknown")\" (size: \(self.size)MB).")
+                Text("Your peer wants to send you \"\(self.fileName ?? "Unknown")\" (size: \(self.humanSize)).")
                 HStack {
                     Button("Accept", action: {
                         var url = self.openFileSelector()
-                        if let uri = url {
+                        if var uri = url {
                             url = uri.appendingPathComponent(fileName ?? "Unknown")
+                            self.onChangeFunc(true)
                         }
                         self.url = url
-                        self.onChangeFunc(true)
                     })
                     Button("Decline", action: {
                         self.onChangeFunc(false)
@@ -49,38 +54,24 @@ struct ReceiveConfirmView: View {
             }
         }
         .task({
-            self.fetchData(ctx, code)
+            await self.fetchData()
         })
     }
 
-    @MainActor
-    func updateUI(_ error: NSError) async {
-        state = .error(error)
-    }
-
-    @MainActor
-    func updateUI(_ size: Int64, _ filename: String) {
-        self.size = size
-        self.fileName = fileName
-        state = .done
-    }
-
-    func fetchData(_ ctx: WormholeWilliamReceiverContext, _ code: String) {
+    func fetchData() async {
         if isInitialised {
             return
         }
         isInitialised = true
-
-        Task.detached {
-            var error: NSError?
-            WormholeWilliamReceiverContextInit(ctx, code, &error)
-            if let msg = error {
-                await self.updateUI(msg)
-            } else {
-                let size = WormholeWilliamReceiverContextGetSize(ctx)
-                let fileName = WormholeWilliamReceiverContextGetName(ctx)
-                await self.updateUI(size, fileName)
-            }
+        
+        do {
+            try ctx.prepare(code: code)
+            self.size = size
+            self.fileName = fileName
+            state = .done
+        } catch let error as NSError {
+            state = .error(error)
+            
         }
     }
 
@@ -91,5 +82,19 @@ struct ReceiveConfirmView: View {
         openPanel.canChooseFiles = false
         let response = openPanel.runModal()
         return response == .OK ? openPanel.url : nil
+    }
+}
+
+struct ReceiveConfirmView_Previews: PreviewProvider {
+    static var previews: some View {
+        let view = ReceiveConfirmView(
+            ctx: ReceiverFile(),
+            code: "7-crossover-clockwork",
+            url: .constant(URL(string: "/dev/null")),
+            onChangeFunc: { _ in }
+        )
+        view.state = ViewState.done
+        view.isInitialised = true
+        return view
     }
 }

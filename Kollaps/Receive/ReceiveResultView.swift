@@ -15,7 +15,7 @@ private enum ViewState {
 }
 
 struct ReceiveResultView: View {
-    @State var ctx: WormholeWilliamReceiverContext
+    @State var ctx: ReceiverBase
     @State var url: URL
     @State private var isInitialised = false
     @State private var state = ViewState.prepare
@@ -24,6 +24,7 @@ struct ReceiveResultView: View {
         VStack {
             switch state {
             case .prepare:
+                Text("Receiving data...")
                 ProgressView()
             case .done:
                 Text("Successfully received file.")
@@ -42,13 +43,11 @@ struct ReceiveResultView: View {
         }
         isInitialised = true
 
-        var error: NSError?
-        WormholeWilliamReceiverContextReceiveFile(ctx, url.path(), &error)
-
-        if let msg = error {
-            state = .error(msg)
-        } else {
+        do {
+            try (ctx as! ReceiverFile).finish(url)
             state = .done
+        } catch let msg as NSError {
+            state = .error(msg)
         }
     }
 }

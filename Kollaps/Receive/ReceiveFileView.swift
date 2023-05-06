@@ -6,35 +6,48 @@
 //
 
 import SwiftUI
-import WormholeWilliam
+
+private enum ViewState {
+    case done
+    case error(NSError)
+    case prepare
+}
 
 struct ReceiveFileView: View {
-    let ctx: WormholeWilliamReceiverContext
+    let ctx: ReceiverBase
     let code: String
     let url: String
-    private var done = false
+    @State private var state = ViewState.prepare
 
-    init(ctx: WormholeWilliamReceiverContext, code: String, url: String) {
+    init(ctx: ReceiverBase, code: String, url: String) {
         self.ctx = ctx
         self.code = code
         self.url = url
 
         self.receiveData()
-        self.done = true
     }
 
     var body: some View {
-        if done {
-            Text("Done receiving data...")
-        } else {
-            Text("Receiving data...")
-
+        VStack {
+            switch state {
+            case .prepare:
+                Text("Receiving data...")
+                ProgressView()
+            case .done:
+                Text("Done receiving data...")
+            case .error(let msg):
+                Text("Couldn't receive data due to error \(msg.localizedDescription)")
+            }
         }
     }
 
     func receiveData() {
-        var error: NSError?
-        WormholeWilliamReceiverContextReceiveFile(ctx, url, &error)
+        do {
+            try (ctx as! ReceiverFile).finish(url)
+            state = ViewState.done
+        } catch let msg as NSError {
+            state = ViewState.error(msg)
+        }
 
     }
 }
