@@ -15,6 +15,7 @@
 		3A38AA152A0645C9001C0420 /* ReceiverBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38AA142A0645C9001C0420 /* ReceiverBase.swift */; };
 		3A38AA172A064A7F001C0420 /* ReceiverText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38AA162A064A7F001C0420 /* ReceiverText.swift */; };
 		3A38AA192A064A8B001C0420 /* ReceiverFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38AA182A064A8B001C0420 /* ReceiverFile.swift */; };
+		3A38AA1B2A067792001C0420 /* ReceiverTextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38AA1A2A067792001C0420 /* ReceiverTextTests.swift */; };
 		3A6E026329F2A8FC00F6F321 /* SendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E026229F2A8FC00F6F321 /* SendView.swift */; };
 		3A6E026529F2B1B400F6F321 /* SenderFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E026429F2B1B400F6F321 /* SenderFile.swift */; };
 		3A6E026B29F8331700F6F321 /* ReceiveCodeEnterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E026A29F8331700F6F321 /* ReceiveCodeEnterView.swift */; };
@@ -23,7 +24,7 @@
 		3AEDF09629E1535300A9A5A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDF09529E1535300A9A5A5 /* ContentView.swift */; };
 		3AEDF09829E1535400A9A5A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AEDF09729E1535400A9A5A5 /* Assets.xcassets */; };
 		3AEDF09B29E1535400A9A5A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AEDF09A29E1535400A9A5A5 /* Preview Assets.xcassets */; };
-		3AEDF0A629E1535400A9A5A5 /* KollapsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDF0A529E1535400A9A5A5 /* KollapsTests.swift */; };
+		3AEDF0A629E1535400A9A5A5 /* SenderTextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDF0A529E1535400A9A5A5 /* SenderTextTests.swift */; };
 		3AEDF0B029E1535400A9A5A5 /* KollapsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDF0AF29E1535400A9A5A5 /* KollapsUITests.swift */; };
 		3AEDF0B229E1535400A9A5A5 /* KollapsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDF0B129E1535400A9A5A5 /* KollapsUITestsLaunchTests.swift */; };
 		3AEDF0C029E1537600A9A5A5 /* SenderBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDF0BF29E1537600A9A5A5 /* SenderBase.swift */; };
@@ -60,6 +61,7 @@
 		3A38AA142A0645C9001C0420 /* ReceiverBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverBase.swift; sourceTree = "<group>"; };
 		3A38AA162A064A7F001C0420 /* ReceiverText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverText.swift; sourceTree = "<group>"; };
 		3A38AA182A064A8B001C0420 /* ReceiverFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverFile.swift; sourceTree = "<group>"; };
+		3A38AA1A2A067792001C0420 /* ReceiverTextTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverTextTests.swift; sourceTree = "<group>"; };
 		3A6E026229F2A8FC00F6F321 /* SendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendView.swift; sourceTree = "<group>"; };
 		3A6E026429F2B1B400F6F321 /* SenderFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderFile.swift; sourceTree = "<group>"; };
 		3A6E026A29F8331700F6F321 /* ReceiveCodeEnterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveCodeEnterView.swift; sourceTree = "<group>"; };
@@ -67,11 +69,11 @@
 		3AEDF09029E1535300A9A5A5 /* Kollaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kollaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AEDF09329E1535300A9A5A5 /* KollapsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KollapsApp.swift; sourceTree = "<group>"; };
 		3AEDF09529E1535300A9A5A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		3AEDF09729E1535400A9A5A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3AEDF09729E1535400A9A5A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Kollaps/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		3AEDF09A29E1535400A9A5A5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3AEDF09C29E1535400A9A5A5 /* Kollaps.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kollaps.entitlements; sourceTree = "<group>"; };
 		3AEDF0A129E1535400A9A5A5 /* KollapsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KollapsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3AEDF0A529E1535400A9A5A5 /* KollapsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KollapsTests.swift; sourceTree = "<group>"; };
+		3AEDF0A529E1535400A9A5A5 /* SenderTextTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderTextTests.swift; sourceTree = "<group>"; };
 		3AEDF0AB29E1535400A9A5A5 /* KollapsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KollapsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AEDF0AF29E1535400A9A5A5 /* KollapsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KollapsUITests.swift; sourceTree = "<group>"; };
 		3AEDF0B129E1535400A9A5A5 /* KollapsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KollapsUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -182,7 +184,8 @@
 		3AEDF0A429E1535400A9A5A5 /* KollapsTests */ = {
 			isa = PBXGroup;
 			children = (
-				3AEDF0A529E1535400A9A5A5 /* KollapsTests.swift */,
+				3AEDF0A529E1535400A9A5A5 /* SenderTextTests.swift */,
+				3A38AA1A2A067792001C0420 /* ReceiverTextTests.swift */,
 			);
 			path = KollapsTests;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				3AEDF09D29E1535400A9A5A5 /* Sources */,
 				3AEDF09E29E1535400A9A5A5 /* Frameworks */,
 				3AEDF09F29E1535400A9A5A5 /* Resources */,
+				9F8E1D973D011BB5228DF584 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -402,6 +406,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9F8E1D973D011BB5228DF584 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KollapsTests/Pods-KollapsTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KollapsTests/Pods-KollapsTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KollapsTests/Pods-KollapsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F0D80E23AE8F298B52A6CAAF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -475,7 +496,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AEDF0A629E1535400A9A5A5 /* KollapsTests.swift in Sources */,
+				3AEDF0A629E1535400A9A5A5 /* SenderTextTests.swift in Sources */,
+				3A38AA1B2A067792001C0420 /* ReceiverTextTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,21 +645,24 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 41AD06D1FA261DAA98E0F1C6 /* Pods-Kollaps.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon Debug";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Kollaps/Kollaps.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Kollaps/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.Cogitri.Kollaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -650,21 +675,24 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1043D02CCCD92B18CC598531 /* Pods-Kollaps.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon Release";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Kollaps/Kollaps.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Kollaps/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.Cogitri.Kollaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";

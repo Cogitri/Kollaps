@@ -10,7 +10,8 @@ target 'Kollaps' do
 
   target 'KollapsTests' do
     inherit! :search_paths
-    # Pods for testing
+    pod 'Quick'
+    pod 'Nimble'
   end
 
   target 'KollapsUITests' do

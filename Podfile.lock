@@ -1,16 +1,24 @@
 PODS:
+  - Nimble (12.0.0)
+  - Quick (6.1.0)
   - WormholeWilliam (0.0.4)
 
 DEPENDENCIES:
+  - Nimble
+  - Quick
   - WormholeWilliam (~> 0.0.4)
 
 SPEC REPOS:
   trunk:
+    - Nimble
+    - Quick
     - WormholeWilliam
 
 SPEC CHECKSUMS:
+  Nimble: 02a4990866e51868303a466970cd1c81bb84a192
+  Quick: 6676ffb409bf04abba2ff23902af2407bfc6ac90
   WormholeWilliam: bbb8b8b9a9e59a8fceedd08becc29a069564b75b
 
-PODFILE CHECKSUM: 6e308ab657cd0927bc68102e2ecc86bcd98a6117
+PODFILE CHECKSUM: 810e8e58509cfc8c477ec5d971fac85aa38b86b9
 
 COCOAPODS: 1.12.1
