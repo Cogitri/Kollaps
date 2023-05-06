@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E4818E84080C2CB33446D6A /* Pods_KollapsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9C614B3FB0D3A2719FF15E /* Pods_KollapsTests.framework */; };
-		38CB43B5D32A856E9B9AFDC4 /* Pods_Kollaps_KollapsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CC89291128D6710A925677 /* Pods_Kollaps_KollapsUITests.framework */; };
+		099BF4F05E55456DD0DDA61D /* Pods_Kollaps_KollapsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886FCDCEA1D03CC176FAF627 /* Pods_Kollaps_KollapsUITests.framework */; };
 		3A38AA0D2A01D423001C0420 /* ReceiveResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38AA0C2A01D423001C0420 /* ReceiveResultView.swift */; };
 		3A38AA112A059FAA001C0420 /* SendSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38AA102A059FAA001C0420 /* SendSelectView.swift */; };
 		3A38AA132A059FCE001C0420 /* SendCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38AA122A059FCE001C0420 /* SendCodeView.swift */; };
@@ -30,7 +29,8 @@
 		3AEDF0C029E1537600A9A5A5 /* SenderBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDF0BF29E1537600A9A5A5 /* SenderBase.swift */; };
 		3AEDF0C229E1538C00A9A5A5 /* SenderText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDF0C129E1538C00A9A5A5 /* SenderText.swift */; };
 		3AEDF0C629E1554700A9A5A5 /* ReceiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEDF0C529E1554700A9A5A5 /* ReceiveView.swift */; };
-		BA87F56F11291F3497C70A9A /* Pods_Kollaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF913E0A4630A955C9B74778 /* Pods_Kollaps.framework */; };
+		AD67BDFAD814E5CA2B7DDEC1 /* Pods_KollapsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87C98657BD021193B3136624 /* Pods_KollapsTests.framework */; };
+		D8A8FA420AFA983BC149F3C5 /* Pods_Kollaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E15258A49DB9A276D0AA2D7 /* Pods_Kollaps.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,6 @@
 		0B84E838CB1AC1E870406618 /* Pods-KollapsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KollapsTests.release.xcconfig"; path = "Target Support Files/Pods-KollapsTests/Pods-KollapsTests.release.xcconfig"; sourceTree = "<group>"; };
 		1043D02CCCD92B18CC598531 /* Pods-Kollaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kollaps.release.xcconfig"; path = "Target Support Files/Pods-Kollaps/Pods-Kollaps.release.xcconfig"; sourceTree = "<group>"; };
 		142F3236D48427A9CB62581F /* Pods-Kollaps-KollapsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kollaps-KollapsUITests.release.xcconfig"; path = "Target Support Files/Pods-Kollaps-KollapsUITests/Pods-Kollaps-KollapsUITests.release.xcconfig"; sourceTree = "<group>"; };
-		27CC89291128D6710A925677 /* Pods_Kollaps_KollapsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kollaps_KollapsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A38AA0C2A01D423001C0420 /* ReceiveResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveResultView.swift; sourceTree = "<group>"; };
 		3A38AA102A059FAA001C0420 /* SendSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendSelectView.swift; sourceTree = "<group>"; };
 		3A38AA122A059FCE001C0420 /* SendCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCodeView.swift; sourceTree = "<group>"; };
@@ -82,9 +81,10 @@
 		3AEDF0C529E1554700A9A5A5 /* ReceiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveView.swift; sourceTree = "<group>"; };
 		41AD06D1FA261DAA98E0F1C6 /* Pods-Kollaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kollaps.debug.xcconfig"; path = "Target Support Files/Pods-Kollaps/Pods-Kollaps.debug.xcconfig"; sourceTree = "<group>"; };
 		4DDE44B0F5EC946B8AB9C155 /* Pods-Kollaps-KollapsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kollaps-KollapsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Kollaps-KollapsUITests/Pods-Kollaps-KollapsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4E15258A49DB9A276D0AA2D7 /* Pods_Kollaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kollaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		591F804D667FEB313E30C772 /* Pods-KollapsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KollapsTests.debug.xcconfig"; path = "Target Support Files/Pods-KollapsTests/Pods-KollapsTests.debug.xcconfig"; sourceTree = "<group>"; };
-		7E9C614B3FB0D3A2719FF15E /* Pods_KollapsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KollapsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF913E0A4630A955C9B74778 /* Pods_Kollaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kollaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87C98657BD021193B3136624 /* Pods_KollapsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KollapsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		886FCDCEA1D03CC176FAF627 /* Pods_Kollaps_KollapsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kollaps_KollapsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA87F56F11291F3497C70A9A /* Pods_Kollaps.framework in Frameworks */,
+				D8A8FA420AFA983BC149F3C5 /* Pods_Kollaps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E4818E84080C2CB33446D6A /* Pods_KollapsTests.framework in Frameworks */,
+				AD67BDFAD814E5CA2B7DDEC1 /* Pods_KollapsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38CB43B5D32A856E9B9AFDC4 /* Pods_Kollaps_KollapsUITests.framework in Frameworks */,
+				099BF4F05E55456DD0DDA61D /* Pods_Kollaps_KollapsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,9 +215,9 @@
 		5911D5EE8FD7CA7E27E00FF8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FF913E0A4630A955C9B74778 /* Pods_Kollaps.framework */,
-				27CC89291128D6710A925677 /* Pods_Kollaps_KollapsUITests.framework */,
-				7E9C614B3FB0D3A2719FF15E /* Pods_KollapsTests.framework */,
+				4E15258A49DB9A276D0AA2D7 /* Pods_Kollaps.framework */,
+				886FCDCEA1D03CC176FAF627 /* Pods_Kollaps_KollapsUITests.framework */,
+				87C98657BD021193B3136624 /* Pods_KollapsTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -577,7 +577,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -632,7 +632,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -710,7 +710,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.Cogitri.KollapsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -729,7 +729,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.Cogitri.KollapsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
