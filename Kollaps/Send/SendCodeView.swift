@@ -40,7 +40,7 @@ struct SendCodeView: View {
                 Text("Couldn't send file due to error \(msg.localizedDescription)")
             }
         }.task({
-            startSending()
+            await startSending()
         })
     }
 
@@ -50,16 +50,7 @@ struct SendCodeView: View {
         pasteboard.setString(code, forType: .string)
     }
 
-    @MainActor
-    func updateUI(_ error: NSError? = nil) async {
-        if let msg = error {
-            state = .error(msg)
-        } else {
-            state = .done
-        }
-    }
-
-    func startSending() {
+    func startSending() async {
         if isInitialised {
             return
         }
@@ -67,10 +58,10 @@ struct SendCodeView: View {
 
         Task.detached {
             do {
-                try sender.finish()
-                await self.updateUI()
+                try await sender.finish()
+                state = .done
             } catch let error as NSError {
-                await self.updateUI(error)
+                state = .error(error)
             }
         }
     }

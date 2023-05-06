@@ -9,12 +9,15 @@ import Foundation
 import WormholeWilliam
 
 class SenderFile: SenderBase {
-    func prepare(con text: String) throws -> String {
-        var error: NSError?
-        WormholeWilliamPrepareSendFile(self.ctx, text, &error)
-        if let error {
-            throw error
+    func prepare(con text: String) async throws -> String {
+        let task = Task.detached {
+            var error: NSError?
+            WormholeWilliamPrepareSendFile(self.ctx, text, &error)
+            if let error {
+                throw error
+            }
+            return self.code
         }
-        return self.code
+        return try await task.value
     }
 }

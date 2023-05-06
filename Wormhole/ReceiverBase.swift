@@ -13,13 +13,16 @@ class RecevierBaseClass {
         self.ctx = WormholeWilliamNewReceiverContext()!
     }
 
-    public func prepare(code: String) throws {
-        var error: NSError?
-        WormholeWilliamReceiverContextInit(ctx, code, &error)
+    public func prepare(code: String) async throws {
+        let task = Task.detached {
+            var error: NSError?
+            WormholeWilliamReceiverContextInit(self.ctx, code, &error)
 
-        if let msg = error {
-            throw msg
+            if let msg = error {
+                throw msg
+            }
         }
+        try await task.value
     }
 
     var fileSize: Int64 {

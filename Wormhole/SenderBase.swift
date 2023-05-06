@@ -9,7 +9,7 @@ import Foundation
 import WormholeWilliam
 
 protocol SenderBaseProtocol {
-    func prepare(con: String) throws -> String
+    func prepare(con: String) async throws -> String
 }
 
 class SenderBaseClass {
@@ -17,13 +17,16 @@ class SenderBaseClass {
         self.ctx = WormholeWilliamNewSenderContext()!
     }
 
-    public func finish() throws {
-        var error: NSError?
-        WormholeWilliamSenderContextFinishSend(ctx, &error)
+    public func finish() async throws {
+        let task = Task.detached {
+            var error: NSError?
+            WormholeWilliamSenderContextFinishSend(self.ctx, &error)
 
-        if let msg = error {
-            throw msg
+            if let msg = error {
+                throw msg
+            }
         }
+        return try await task.value
     }
 
     internal var code: String {

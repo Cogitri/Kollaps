@@ -42,7 +42,7 @@ struct ReceiveView: View {
         case .rejectedView:
             Text("Rejected the transfer")
         case .resultView:
-            ReceiveResultView(ctx: ctx!, url: url!)
+            ReceiveResultView(ctx: ctx, url: url!)
         }
     }
 }

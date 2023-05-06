@@ -10,6 +10,7 @@ import SwiftUI
 struct SendSelectView: View {
     @Binding var code: String
     let sender: SenderBase
+    @State private var isPreparing = false
 
     var body: some View {
         VStack {
@@ -21,12 +22,27 @@ struct SendSelectView: View {
             Text("Send data")
                 .font(.title)
 
-            Button("Select data to send", action: {
-                let url = openFileSelector()
-                if url != nil {
-                    sendUrl(url!)
+            Button(
+                action: {
+                    isPreparing = true
+                    let url = openFileSelector()
+                    if url != nil {
+                        Task {
+                            await sendUrl(url!)
+                            isPreparing = false
+                        }
+                    }
+                },
+                label: {
+                    ZStack {
+                        Text("Select data to send").opacity(isPreparing ? 0 : 1)
+
+                        if isPreparing {
+                            ProgressView()
+                        }
+                    }
                 }
-            })
+            ).disabled(isPreparing)
         }
         .padding()
     }
@@ -40,8 +56,8 @@ struct SendSelectView: View {
         return response == .OK ? openPanel.url : nil
     }
 
-    func sendUrl(_ url: URL) {
-        let code = try? sender.prepare(con: url.path())
+    func sendUrl(_ url: URL) async {
+        let code = try? await sender.prepare(con: url.path())
         if code != nil {
             self.code = code!
         }

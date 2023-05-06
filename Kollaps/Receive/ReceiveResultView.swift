@@ -33,18 +33,18 @@ struct ReceiveResultView: View {
             }
         }
         .task({
-            self.finishReceive()
+            await self.finishReceive()
         })
     }
 
-    func finishReceive() {
+    func finishReceive() async {
         if isInitialised {
             return
         }
         isInitialised = true
 
         do {
-            try (ctx as! ReceiverFile).finish(url)
+            try await (ctx as? ReceiverFile)!.finish(url)
             state = .done
         } catch let msg as NSError {
             state = .error(msg)
