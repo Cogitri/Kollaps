@@ -8,23 +8,27 @@
 import SwiftUI
 import WormholeWilliam
 
+private enum ViewState {
+    case done
+    case error(NSError)
+    case prepare
+}
+
 struct ReceiveResultView: View {
-    @State private var error: NSError?
     @State var ctx: WormholeWilliamReceiverContext
     @State var url: URL
-    @State var isInitialised = false
-    @State var isDone = false
+    @State private var isInitialised = false
+    @State private var state = ViewState.prepare
 
     var body: some View {
         VStack {
-            if !isDone {
+            switch state {
+            case .prepare:
                 ProgressView()
-            } else {
-                if let msg = error {
-                    Text("Couldn't receive file due to error \(msg).")
-                } else {
-                    Text("Successfully received file.")
-                }
+            case .done:
+                Text("Successfully received file.")
+            case .error(let msg):
+                Text("Couldn't receive file due to error \(msg.localizedDescription).")
             }
         }
         .task({
@@ -40,7 +44,11 @@ struct ReceiveResultView: View {
 
         var error: NSError?
         WormholeWilliamReceiverContextReceiveFile(ctx, url.path(), &error)
-        self.error = error
-        isDone = true
+
+        if let msg = error {
+            state = .error(msg)
+        } else {
+            state = .done
+        }
     }
 }

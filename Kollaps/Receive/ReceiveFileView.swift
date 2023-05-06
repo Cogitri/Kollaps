@@ -12,7 +12,7 @@ struct ReceiveFileView: View {
     let ctx: WormholeWilliamReceiverContext
     let code: String
     let url: String
-    var done = false
+    private var done = false
 
     init(ctx: WormholeWilliamReceiverContext, code: String, url: String) {
         self.ctx = ctx

@@ -8,20 +8,22 @@
 import SwiftUI
 import WormholeWilliam
 
+private enum ViewState {
+    case done
+    case error(NSError)
+    case prepare
+}
+
 struct SendCodeView: View {
     @Binding var code: String
-    @State private var error: NSError?
     @State private var isInitialised = false
-    @State private var transferDone = false
+    @State private var state = ViewState.prepare
     let sender: SenderBase
 
     var body: some View {
         VStack {
-            if let msg = error {
-                Text("Couldn't send file due to error \(msg.localizedDescription)")
-            } else if transferDone {
-                Text("Succesfully transfered the file to the peer.")
-            } else {
+            switch state {
+            case .prepare:
                 Text("Your Transmit Code")
                     .font(.title)
                     .padding()
@@ -33,6 +35,10 @@ struct SendCodeView: View {
                 }
 
                 ProgressView()
+            case .done:
+                Text("Succesfully transfered the file to the peer.")
+            case .error(let msg):
+                Text("Couldn't send file due to error \(msg.localizedDescription)")
             }
         }.task({
             startSending()
@@ -47,8 +53,11 @@ struct SendCodeView: View {
 
     @MainActor
     func updateUI(_ error: NSError? = nil) async {
-        self.error = error
-        self.transferDone = true
+        if let msg = error {
+            state = .error(msg)
+        } else {
+            state = .done
+        }
     }
 
     func startSending() {

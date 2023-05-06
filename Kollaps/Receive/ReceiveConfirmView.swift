@@ -8,11 +8,17 @@
 import SwiftUI
 import WormholeWilliam
 
+private enum ViewState {
+    case done
+    case error(NSError)
+    case prepare
+}
+
 struct ReceiveConfirmView: View {
-    @State var size: Int64 = 0
-    @State var fileName: String?
-    @State var error: NSError?
-    @State var isInitialised = false
+    @State private var size: Int64 = 0
+    @State private var fileName: String?
+    @State private var isInitialised = false
+    @State private var state = ViewState.prepare
     let ctx: WormholeWilliamReceiverContext
     let code: String
     @Binding var url: URL?
@@ -20,9 +26,10 @@ struct ReceiveConfirmView: View {
 
     var body: some View {
         VStack {
-            if error != nil {
-                Text("Couldn't initialise receiver: \(error!)")
-            } else if size != 0 && fileName != nil {
+            switch state {
+            case .prepare:
+                    ProgressView()
+            case .done:
                 Text("Your peer wants to send you \"\(self.fileName ?? "Unknown")\" (size: \(self.size)MB).")
                 HStack {
                     Button("Accept", action: {
@@ -37,8 +44,8 @@ struct ReceiveConfirmView: View {
                         self.onChangeFunc(false)
                     })
                 }
-            } else {
-                ProgressView()
+            case .error(let msg):
+                Text("Couldn't initialise receiver: \(msg.localizedDescription)")
             }
         }
         .task({
@@ -47,10 +54,15 @@ struct ReceiveConfirmView: View {
     }
 
     @MainActor
-    func updateUI(size: Int64 = 0, fileName: String? = nil, error: NSError? = nil) async {
-        self.error = error
+    func updateUI(_ error: NSError) async {
+        state = .error(error)
+    }
+
+    @MainActor
+    func updateUI(_ size: Int64, _ filename: String) {
         self.size = size
         self.fileName = fileName
+        state = .done
     }
 
     func fetchData(_ ctx: WormholeWilliamReceiverContext, _ code: String) {
@@ -62,12 +74,12 @@ struct ReceiveConfirmView: View {
         Task.detached {
             var error: NSError?
             WormholeWilliamReceiverContextInit(ctx, code, &error)
-            if error != nil {
-                await self.updateUI(error: error)
+            if let msg = error {
+                await self.updateUI(msg)
             } else {
                 let size = WormholeWilliamReceiverContextGetSize(ctx)
                 let fileName = WormholeWilliamReceiverContextGetName(ctx)
-                await self.updateUI(size: size, fileName: fileName)
+                await self.updateUI(size, fileName)
             }
         }
     }
