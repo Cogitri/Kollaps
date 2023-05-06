@@ -66,8 +66,8 @@ struct ReceiveConfirmView: View {
 
         do {
             try await ctx.prepare(code: code)
-            self.size = size
-            self.fileName = fileName
+            self.size = ctx.fileSize
+            self.fileName = ctx.fileName
             state = .done
         } catch let error as NSError {
             state = .error(error)
