@@ -34,12 +34,10 @@ struct SendSelectView: View {
                     }
                 },
                 label: {
-                    ZStack {
-                        Text("Select data to send").opacity(isPreparing ? 0 : 1)
-
-                        if isPreparing {
-                            ProgressView()
-                        }
+                    if isPreparing {
+                        ProgressView()
+                    } else {
+                        Text("Select data to send")
                     }
                 }
             ).disabled(isPreparing)
