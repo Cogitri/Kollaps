@@ -2,5 +2,8 @@ opt_in_rules:
   - empty_count
   - empty_string
 
+disabled_rules:
+  - line_length
+
 excluded:
   - Pods
