@@ -14,8 +14,4 @@ target 'Kollaps' do
     pod 'Nimble'
   end
 
-  target 'KollapsUITests' do
-    inherit! :search_paths
-  end
-
 end
