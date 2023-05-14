@@ -12,6 +12,7 @@ private enum ViewState {
     case done
     case error(NSError)
     case prepare
+    case timeout
 }
 
 struct ReceiveConfirmView: View {
@@ -51,6 +52,8 @@ struct ReceiveConfirmView: View {
                 }
             case .error(let msg):
                 Text("Couldn't initialise receiver: \(msg.localizedDescription)")
+            case .timeout:
+                Text("We couldn't retrieve additional information for this transmission. Is the code correct?")
             }
         }
         .task({
@@ -63,6 +66,13 @@ struct ReceiveConfirmView: View {
             return
         }
         isInitialised = true
+
+        Task {
+            do {
+                try await Task.sleep(nanoseconds: 10_000_000_000)
+                state = .timeout
+            } catch {}
+        }
 
         do {
             try await ctx.prepare(code: code)

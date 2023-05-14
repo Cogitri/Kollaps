@@ -7,9 +7,16 @@
 
 import SwiftUI
 
+private enum ViewState {
+    case error(NSError)
+    case prepare
+    case timeout
+}
+
 struct SendSelectView: View {
     @Binding var code: String
     let sender: SenderBase
+    @State private var state = ViewState.prepare
     @State private var isPreparing = false
 
     var body: some View {
@@ -22,25 +29,31 @@ struct SendSelectView: View {
             Text("Send data")
                 .font(.title)
 
-            Button(
-                action: {
-                    isPreparing = true
-                    let url = openFileSelector()
-                    if url != nil {
-                        Task {
-                            await sendUrl(url!)
-                            isPreparing = false
+            switch state {
+            case .prepare:
+                Button(
+                    action: {
+                        isPreparing = true
+                        let url = openFileSelector()
+                        if url != nil {
+                            Task {
+                                await sendUrl(url!)
+                            }
+                        }
+                    },
+                    label: {
+                        if isPreparing {
+                            ProgressView()
+                        } else {
+                            Text("Select data to send")
                         }
                     }
-                },
-                label: {
-                    if isPreparing {
-                        ProgressView()
-                    } else {
-                        Text("Select data to send")
-                    }
-                }
-            ).disabled(isPreparing)
+                ).disabled(isPreparing)
+            case .error(let msg):
+                Text("Couldn't initialise sender: \(msg.localizedDescription)")
+            case .timeout:
+                Text("Generating the transmission code takes longer than expected...Does your internet connection work?")
+            }
         }
         .padding()
     }
@@ -55,9 +68,17 @@ struct SendSelectView: View {
     }
 
     func sendUrl(_ url: URL) async {
-        let code = try? await sender.prepare(con: url.path())
-        if code != nil {
-            self.code = code!
+        Task {
+            do {
+                try await Task.sleep(nanoseconds: 10_000_000_000)
+                state = .timeout
+            } catch {}
+        }
+
+        do {
+            self.code = try await sender.prepare(con: url.path())
+        } catch let msg as NSError {
+            state = .error(msg)
         }
     }
 }
