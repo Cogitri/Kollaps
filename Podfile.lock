@@ -6,19 +6,22 @@ PODS:
 DEPENDENCIES:
   - Nimble
   - Quick
-  - WormholeWilliam (~> 0.0.4)
+  - WormholeWilliam (from `/Users/rasmus/Projects/WormholeWilliamSwift`)
 
 SPEC REPOS:
   trunk:
     - Nimble
     - Quick
-    - WormholeWilliam
+
+EXTERNAL SOURCES:
+  WormholeWilliam:
+    :path: "/Users/rasmus/Projects/WormholeWilliamSwift"
 
 SPEC CHECKSUMS:
   Nimble: 02a4990866e51868303a466970cd1c81bb84a192
   Quick: 6676ffb409bf04abba2ff23902af2407bfc6ac90
   WormholeWilliam: bbb8b8b9a9e59a8fceedd08becc29a069564b75b
 
-PODFILE CHECKSUM: 09bd41fada82446a38de7bdb3d7876f4b38df7f4
+PODFILE CHECKSUM: 6b3834f5c46efe038506b06e84fa0124e090f7cd
 
 COCOAPODS: 1.12.1

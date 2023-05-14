@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WormholeWilliam
 
 struct ReceiveCodeEnterView: View {
     @State private var isError = false
@@ -46,9 +47,8 @@ struct ReceiveCodeEnterView: View {
     }
 
     private func validateCode() {
-        print(code)
         let passwordRegex = /[0-9]-[a-z]+-[a-z]+/
-        if code.contains(passwordRegex) {
+        if code.contains(passwordRegex) && WormholeWilliamValidateCode(code) {
             doneCallback()
         } else {
             isError = true

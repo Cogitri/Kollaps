@@ -6,7 +6,7 @@ target 'Kollaps' do
   use_frameworks!
 
   # Pods for Kollaps
-  pod 'WormholeWilliam', '~> 0.0.4'
+  pod 'WormholeWilliam', '~> 0.0.5'
 
   target 'KollapsTests' do
     inherit! :search_paths
